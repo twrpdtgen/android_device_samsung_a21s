@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_a21s.mk
+    $(LOCAL_DIR)/twrp_a21s.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_a21s-user \
-    omni_a21s-userdebug \
-    omni_a21s-eng
+    twrp_a21s-user \
+    twrp_a21s-userdebug \
+    twrp_a21s-eng
