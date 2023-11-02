@@ -1,9 +1,11 @@
-//
-// Copyright (C) 2023 The Android Open Source Project
-// Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
-//
-// SPDX-License-Identifier: Apache-2.0
-//
+ro.product.board=exynos850
 
-soong_namespace {
-}
+ro.board.platform=universal3830
+
+sys.usb.controller=13600000.dwc3
+
+ro.boot.usbcontroller=13600000.dwc3
+
+ro.boot.dynamic_partitions=true
+
+ro.boot.boot_devices=12100000.dwmmc0
