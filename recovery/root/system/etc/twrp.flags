@@ -1,0 +1,35 @@
+#<mnt_point>       <type>     <src>                                 <mnt_flags and options>
+/system             ext4      system                                flags=display=system;logical
+/vendor             ext4      vendor                                flags=display=vendor;logical
+/product            ext4      product                               flags=display=product;logical
+/odm                ext4      odm                                   flags=display=odm;logical
+/boot               emmc      /dev/block/by-name/boot               flags=display="Boot";backup=1;flashimg=1;
+/recovery           emmc      /dev/block/by-name/recovery           flags=display="Recovery";backup=1;flashimg=1;
+/metadata           ext4      /dev/block/by-name/metadata           flags=display="Metadata";
+/data               f2fs      /dev/block/by-name/userdata           flags=display=data
+/cache              ext4      /dev/block/by-name/cache              flags=display="Cache";
+/sdcard             sdfat     /dev/block/mmcblk0p1                  flags=display=sdcard
+/efs                ext4      /dev/block/by-name/efs                flags=backup=1;display="Efs";
+/sec_efs            ext4      /dev/block/by-name/sec_efs            flags=backup=1;display="Sec Efs";
+/carrier            ext4      /dev/block/by-name/carrier            flags=display=carrier
+/preload            ext4      /dev/block/by-name/hidden             flags=display=preload
+/modem              emmc      /dev/block/by-name/radio              flags=backup=1;display="Modem";
+/misc               emmc      /dev/block/by-name/misc               
+/keydata            ext4      /dev/block/by-name/keydata            flags=display=keydata
+/keyrefuge          ext4      /dev/block/by-name/keyrefuge          flags=display=keyrefuge
+/dtbo               emmc      /dev/block/by-name/dtbo               flags=display="DTBO Image";flashimg=1;backup=1;
+/prism              ext4      /dev/block/by-name/prism              flags=display="Prism";backup=0;
+/prism_image        emmc      /dev/block/by-name/prism              flags=display="Prism Image";backup=1;flashimg=1;
+/optics             ext4      /dev/block/by-name/optics             flags=display="Optics";backup=0;
+/optics_image       emmc      /dev/block/by-name/optics             flags=display="Optics Image";backup=1;flashimg=1;
+/vbmeta_system      emmc      /dev/block/by-name/vbmeta_system      flags=display="Vbmeta System";backup=1;flashimg=1;
+/vendor_boot        emmc      /dev/block/by-name/vendor_boot        flags=display=vendor_boot
+/vbmeta_samsung     emmc      /dev/block/by-name/vbmeta_samsung     flags=display="Vbmeta Samsung";backup=1;flashimg=1;
+/system_ext         ext4      system_ext                            flags=display=system_ext;logical
+/vendor_dlkm        ext4      vendor_dlkm                           flags=display=vendor_dlkm;logical
+/omr		        ext4	  /dev/block/by-name/omr			    flags=display="Logs (OMR)";backup=1
+/up_param           emmc      /dev/block/by-name/up_param           flags=display="Param";backup=1;flashimg=1;
+
+# External Stuff
+/external_sd        vfat    /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="SDCard";storage;wipeingui;removable;
+/usb-otg            auto    /dev/block/sdf1 /dev/block/sdf          flags=display="USB OTG";storage;wipeingui;removable;
